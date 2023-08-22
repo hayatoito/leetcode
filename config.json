@@ -1,0 +1,30 @@
+{
+  "inject_code": {
+    "rust": {
+      "before_code": [
+        "#[allow(unused_imports)]",
+        "use std::collections::*;"
+      ],
+      "before_function_definition": null,
+      "after_code": "struct Solution; \n\nfn main() {\n    let _ = Solution::__func__;\n}\n"
+    },
+    "python3": {
+      "COMMENT_before_code_exclude": [
+        "from typing import Optional"
+      ]
+    },
+    "cpp": {
+      "before_code_exclude": [
+        "#include <algorithm>",
+        "#include <cassert>",
+        "#include <iostream>",
+        "#include <map>",
+        "#include <set>",
+        "#include <tuple>",
+        "#include <vector>"
+      ],
+      "before_code": [],
+      "after_code": "int main() {\n  std::cout << \"Hello, world!\" << std::endl;\n  return 0;\n}\n"
+    }
+  }
+}
